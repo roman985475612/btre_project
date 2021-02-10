@@ -109,3 +109,7 @@ ENV/
 
 # Public media folder
 /media
+/static
+
+# Db
+*.sqlite3
