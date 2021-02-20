@@ -1,16 +1,26 @@
 from django.contrib import admin
 
-from .models import Listing, Photo
+from .models import Listing, Photo, State
 
 
+@admin.register(State)
+class StateAdmin(admin.ModelAdmin):
+    list_display = ('code', 'name',)
+    # list_display_links = ('code', 'name',)
+    # list_editable = ('code', 'name',)
+
+
+@admin.register(Listing)
 class ListingAdmin(admin.ModelAdmin):
     list_display = (
         'id', 
         'title',
         'is_published',
+        'state2',
         'price',
         'list_date',
-        'realtor'
+        'realtor',
+        'badrooms',
     )
     
     list_display_links = (
@@ -24,6 +34,8 @@ class ListingAdmin(admin.ModelAdmin):
     
     list_editable = (
         'is_published',
+        'badrooms',
+        'state2',
     )
     
     search_fields = (
@@ -31,13 +43,11 @@ class ListingAdmin(admin.ModelAdmin):
         'description',
         'address',
         'city',
-        'state',
         'zipcode',
         'price'
     )
     
-    list_per_page = 2
+    list_per_page = 10
     
 
-admin.site.register(Listing, ListingAdmin)
 admin.site.register(Photo)
