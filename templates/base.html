@@ -1,4 +1,5 @@
 {% load static %}
+{% load topbar %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -16,7 +17,7 @@
 <body>
     {% include 'inc/_messages.html' %}
 
-    {% include 'inc/_topbar.html' %}
+    {% show_topbar %}
     
     {% include 'inc/_navbar.html' %}
 

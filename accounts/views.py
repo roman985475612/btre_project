@@ -37,12 +37,11 @@ def login(request):
                 username=form.cleaned_data['username'],
                 password=form.cleaned_data['password']
             )
-            if user is not None:
-                auth_login(request, user)
-                messages.success(request, 'You are now logged in')
-                return redirect('accounts:dashboard')
-        
-        messages.error(request, 'Invalid credentials')
+            auth.login(request, user)
+            messages.success(request, 'You are now logged in')
+            return redirect('accounts:dashboard')
+        else:
+            messages.error(request, 'Invalid credentials')
 
     form = LoginForm()
 

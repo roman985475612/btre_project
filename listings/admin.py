@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
 
 from .models import Listing, Photo, State
 
@@ -6,12 +7,15 @@ from .models import Listing, Photo, State
 @admin.register(State)
 class StateAdmin(admin.ModelAdmin):
     list_display = ('code', 'name',)
-    # list_display_links = ('code', 'name',)
-    # list_editable = ('code', 'name',)
+
+
+class PhotoInLine(admin.TabularInline):
+    model = Photo
 
 
 @admin.register(Listing)
 class ListingAdmin(admin.ModelAdmin):
+    inlines = [PhotoInLine]
     list_display = (
         'id', 
         'title',
@@ -23,14 +27,8 @@ class ListingAdmin(admin.ModelAdmin):
         'badrooms',
     )
     
-    list_display_links = (
-        'id',
-        'title'
-    )
-    
-    list_filter = (
-        'realtor',
-    )
+    list_display_links = ('id', 'title')
+    list_filter = ('realtor', )
     
     list_editable = (
         'is_published',
@@ -48,6 +46,16 @@ class ListingAdmin(admin.ModelAdmin):
     )
     
     list_per_page = 10
-    
 
-admin.site.register(Photo)
+
+@admin.register(Photo)
+class PhotoAdmin(admin.ModelAdmin):
+    list_display = ('listing', 'title', 'get_photo')
+    list_filter = ('listing',)
+    search_fields = ('title',)
+    list_per_page = 25
+
+    def get_photo(self, obj):
+        if obj.photo:
+            return mark_safe(f'<img src="{obj.photo.url}" width="50">')
+

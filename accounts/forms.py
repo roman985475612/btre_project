@@ -1,5 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from django.contrib import auth
 from django.contrib.auth.models import User
 
 
@@ -36,3 +37,15 @@ class RegisterForm(forms.Form):
 class LoginForm(forms.Form):
     username = forms.CharField(label='Username', max_length=100)
     password = forms.CharField(label='Password', max_length=100)
+
+    def clean(self):
+        cleaned_data = super().clean()
+        user = auth.authenticate(
+            username=cleaned_data.get('username'),
+            password=cleaned_data.get('password')
+        )
+        if user is not None:
+            if not user.is_active:
+                raise ValidationError('User is not active')
+        else:
+            raise ValidationError('Invalid credentials!')
