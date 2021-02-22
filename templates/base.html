@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <title>BT Real Estate</title>
+    <title>{{ title }} | BT Real Estate</title>
 </head>
 <body>
+    {% include 'inc/_messages.html' %}
+
     {% include 'inc/_topbar.html' %}
     
     {% include 'inc/_navbar.html' %}

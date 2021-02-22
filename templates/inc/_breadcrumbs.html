@@ -3,13 +3,14 @@
         <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-            <a href="index.html">
-                <i class="fas fa-home"></i> Home</a>
+                <i class="fas fa-home"></i> <a href="{% url 'index' %}">Home</a>
             </li>
-            <li class="breadcrumb-item">
-            <a href="listings.html">Browse Listings</a>
-            </li>
-            <li class="breadcrumb-item active"> Search Results</li>
+            {% for breadcrumb in breadcrumbs %}
+                <li class="breadcrumb-item">
+                    <a href="{{ breadcrumb.url }}">{{ breadcrumb.title }}</a>
+                </li>
+            {% endfor %}
+            <li class="breadcrumb-item active"> {{ title }}</li>
         </ol>
         </nav>
     </div>

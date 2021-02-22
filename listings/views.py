@@ -1,5 +1,6 @@
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
 
 from .models import Listing, State
 from pages.choices import bedrooms as bedrooms_list, prices, states
@@ -13,6 +14,8 @@ def index(request):
     paged_listings = paginator.get_page(page)
 
     return render(request, 'listings/listings.html', {
+        'title': 'Browse Our Properties',
+        'sub_title': 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!',
         'listings': paged_listings
     })
 
@@ -21,8 +24,16 @@ def listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)
     thumbs = listing.photo_set.all();
     return render(request, 'listings/listing.html', {
+        'title': listing.title,
+        'sub_title': f'<i class="fas fa-map-marker"></i> {listing.city} {listing.state2.code}, {listing.zipcode}',
         'listing': listing,
         'thumbs': thumbs,
+        'breadcrumbs': [
+            {
+                'title': 'Lisitings',
+                'url': reverse('listings:index'),
+            }
+        ]
     })
 
 
@@ -63,5 +74,6 @@ def search(request):
         'bedrooms': bedrooms_list,
         'prices': prices,
         'states': State.objects.all(),
-        'values': request.GET
+        'values': request.GET,
+        'title': 'Search'
     })
