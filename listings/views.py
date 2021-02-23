@@ -3,6 +3,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 
 from .models import Listing, State
+from contacts.forms import ContactForm
 from pages.choices import bedrooms as bedrooms_list, prices, states
 
 
@@ -22,12 +23,27 @@ def index(request):
 
 def listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)
-    thumbs = listing.photo_set.all();
+    
+    if request.user.is_authenticated:
+        contact_form = ContactForm(initial={
+            'user_id': request.user.id,
+            'name': f'{request.user.first_name} {request.user.last_name}',
+            'email': request.user.email,
+            'listing_id': listing.id,
+            'listing_title': listing.title
+        })
+    else:
+        contact_form = ContactForm(initial={
+            'listing_id': listing.id,
+            'listing_title': listing.title
+        })
+
     return render(request, 'listings/listing.html', {
         'title': listing.title,
         'sub_title': f'<i class="fas fa-map-marker"></i> {listing.city} {listing.state2.code}, {listing.zipcode}',
         'listing': listing,
-        'thumbs': thumbs,
+        'thumbs': listing.photo_set.all(),
+        'contact_form': contact_form,
         'breadcrumbs': [
             {
                 'title': 'Lisitings',

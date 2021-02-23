@@ -5,8 +5,6 @@ from listings.models import Listing
 
 
 class Contact(models.Model):
-    # listing = models.CharField(max_length=200)
-    # listing_id = 
     listing = models.ForeignKey(Listing, on_delete=models.DO_NOTHING)
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING, blank=True)
     name = models.CharField(max_length=100)
