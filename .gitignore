@@ -107,6 +107,9 @@ ENV/
 *.sublime-project
 *.sublime-workspace
 
+# PyCharm
+.idea/*
+
 # Public media folder
 /media
 /static

@@ -1,8 +1,11 @@
 from django.contrib import auth, messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 
+from contacts.models import Contact
 from .forms import LoginForm, RegisterForm
+
 
 def register(request):
     if request.method == 'POST':
@@ -51,14 +54,18 @@ def login(request):
     })
 
 
+@login_required
 def logout(request):
     auth.logout(request)
     messages.success(request, 'You are now logout')
     return redirect('index')
 
-# need authorization
+
+@login_required
 def dashboard(request):
+    user_contacts = Contact.objects.order_by('-contact_date').filter(user=request.user)
     return render(request, 'accounts/dashboard.html', {
         'title': 'User Dashboard',
         'sub_title': 'Manage your BT Real Estate account',
+        'user_contacts': user_contacts,
     })

@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+from django.urls import reverse_lazy
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -150,3 +152,13 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger',
 }
+
+# Email config
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = '7c6aa0331c9f89'
+EMAIL_HOST_PASSWORD = '0dbcdcd98cbf2a'
+EMAIL_USE_TLS = True
+
+# Authorization
+LOGIN_REDIRECT_URL = reverse_lazy('accounts:login')

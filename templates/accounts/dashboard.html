@@ -10,38 +10,26 @@
         <div class="container">
         <div class="row">
             <div class="col-md-12">
-            <h2>Welcome {{ user.username | capfirst }}</h2>
+            <h2>Welcome {{ user.first_name | capfirst }}</h2>
             <p>Here are the property listings that you have inquired about</p>
             <table class="table">
                 <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Property</th>
-                    <th></th>
-                </tr>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Property</th>
+                        <th></th>
+                    </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>22</td>
-                    <td>45 Drivewood Circle</td>
-                    <td>
-                    <a class="btn btn-light" href="#">View Listing</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>43</td>
-                    <td>22 Westbrook rd</td>
-                    <td>
-                    <a class="btn btn-light" href="#">View Listing</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>31</td>
-                    <td>12 Samson Ave</td>
-                    <td>
-                    <a class="btn btn-light" href="#">View Listing</a>
-                    </td>
-                </tr>
+                    {% for contact in user_contacts %}
+                        <tr>
+                            <td>{{ contact.id }}</td>
+                            <td>{{ contact.listing }}</td>
+                            <td>
+                                <a class="btn btn-light" href="{{ contact.listing.get_absolute_url }}">View Listing</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
                 </tbody>
             </table>
             </div>
