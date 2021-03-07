@@ -1,0 +1,58 @@
+[
+    {
+        "model": "pages.userfield",
+        "pk": 1,
+        "fields": {
+            "name": "phone",
+            "value": "+7 999 123 45 67"
+        }
+    },
+    {
+        "model": "pages.userfield",
+        "pk": 2,
+        "fields": {
+            "name": "email",
+            "value": "info@btre.com"
+        }
+    },
+    {
+        "model": "pages.userfield",
+        "pk": 3,
+        "fields": {
+            "name": "twitter",
+            "value": "http://www.twitter.com/btre"
+        }
+    },
+    {
+        "model": "pages.userfield",
+        "pk": 4,
+        "fields": {
+            "name": "facebook",
+            "value": "http://www.facebook.com/btre"
+        }
+    },
+    {
+        "model": "pages.userfield",
+        "pk": 5,
+        "fields": {
+            "name": "linkedin",
+            "value": "http://www.linkedin.com/btre"
+        }
+    },
+    {
+        "model": "pages.userfield",
+        "pk": 6,
+        "fields": {
+            "name": "instagram",
+            "value": "http://www.instagram.com/btre"
+        }
+    },
+    {
+        "model": "pages.userfield",
+        "pk": 7,
+        "fields": {
+            "name": "pinterest",
+            "value": "http://www.pinterest.com/btre"
+        }
+    }
+]

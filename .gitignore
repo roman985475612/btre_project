@@ -118,8 +118,5 @@ ENV/
 *.sqlite3
 
 # Settings local
-/btre/settings_development.py
-/btre/settings_production.py
-
-# Test date
-fixtures/
+settings_development.py
+settings_production.py

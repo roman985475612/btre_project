@@ -20,7 +20,7 @@ class ListingAdmin(admin.ModelAdmin):
         'id', 
         'title',
         'is_published',
-        'state2',
+        'state',
         'price',
         'list_date',
         'realtor',
@@ -33,7 +33,7 @@ class ListingAdmin(admin.ModelAdmin):
     list_editable = (
         'is_published',
         'badrooms',
-        'state2',
+        'state',
     )
     
     search_fields = (

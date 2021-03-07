@@ -149,6 +149,6 @@ LOGIN_REDIRECT_URL = reverse_lazy('accounts:login')
 
 # Local settings
 try:
-    from .settings_development import *
-except:
+    from settings_development import *
+except ImportError:
     pass

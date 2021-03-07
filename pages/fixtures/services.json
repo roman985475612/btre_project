@@ -1,0 +1,32 @@
+[
+    {
+        "model": "pages.service",
+        "pk": 1,
+        "fields": {
+            "sort": "10",
+            "title": "Consulting Services",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur hic dignissimos ratione ea quae.",
+            "fa_icon_class": "fas fa-comment"
+        }
+    },
+    {
+        "model": "pages.service",
+        "pk": 2,
+        "fields": {
+            "sort": "20",
+            "title": "Propery Management",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur hic dignissimos ratione ea quae.",
+            "fa_icon_class": "fas fa-home"
+        }
+    },
+    {
+        "model": "pages.service",
+        "pk": 3,
+        "fields": {
+            "sort": "30",
+            "title": "Renting & Selling",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur hic dignissimos ratione ea quae.",
+            "fa_icon_class": "fas fa-suitcase"
+        }
+    }
+]

@@ -40,7 +40,7 @@ def listing(request, listing_id):
 
     return render(request, 'listings/listing.html', {
         'title': listing.title,
-        'sub_title': f'<i class="fas fa-map-marker"></i> {listing.city} {listing.state2.code}, {listing.zipcode}',
+        'sub_title': f'<i class="fas fa-map-marker"></i> {listing.city} {listing.state.code}, {listing.zipcode}',
         'listing': listing,
         'thumbs': listing.photo_set.all(),
         'contact_form': contact_form,
@@ -69,7 +69,7 @@ def search(request):
     if 'state' in request.GET:
         state = request.GET['state']
         if state:
-            queryset_list = queryset_list.filter(state2__code__iexact=state)
+            queryset_list = queryset_list.filter(state__code__iexact=state)
 
     if 'bedrooms' in request.GET:
         bedrooms = request.GET['bedrooms']

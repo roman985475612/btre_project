@@ -1,0 +1,134 @@
+[
+    {
+        "model": "listings.listing",
+        "pk": 1,
+        "fields": {
+            "title": "45 Drivewood Circle",
+            "address": "45 Drivewood Circle",
+            "city": "Norwood",
+            "zipcode": "02062",
+            "description": "Nunc iaculis sodales libero ac suscipit. Maecenas a lacinia odio. Donec ultricies velit sapien, in dapibus orci porta vel. Vivamus nec ante diam. Aenean nunc neque, tristique ac metus eu, pulvinar rutrum quam. Cras placerat congue fermentum. Quisque arcu tellus, semper facilisis pharetra sed, ullamcorper at sem. Cras vitae risus efficitur, faucibus magna a, eleifend purus. Nunc nisi purus, aliquet vel congue ut, tempor efficitur enim. Etiam ut velit vitae orci commodo feugiat non at tellus. Vivamus porta porttitor arcu quis mollis. Integer vitae elit rhoncus, tempor enim eget, maximus sem.",
+            "price": 490000,
+            "badrooms": 2,
+            "bathrooms": 2.0,
+            "garage": 2,
+            "sqft": 3200,
+            "lot_size": 2.5,
+            "is_published": true,
+            "list_date": "2021-02-12 17:56:13.69499+03",
+            "realtor_id": 1,
+            "cover": "photos/2021/02/15/home-6.jpg",
+            "state": "22"
+        }
+    },
+    {
+        "model": "listings.listing",
+        "pk": 2,
+        "fields": {
+            "title": "18 Jafferson Lane",
+            "address": "18 Jafferson Lane",
+            "city": "Woburn",
+            "zipcode": "01801",
+            "description": "Nunc iaculis sodales libero ac suscipit. Maecenas a lacinia odio. Donec ultricies velit sapien, in dapibus orci porta vel. Vivamus nec ante diam. Aenean nunc neque, tristique ac metus eu, pulvinar rutrum quam. Cras placerat congue fermentum. Quisque arcu tellus, semper facilisis pharetra sed, ullamcorper at sem. Cras vitae risus efficitur, faucibus magna a, eleifend purus. Nunc nisi purus, aliquet vel congue ut, tempor efficitur enim. Etiam ut velit vitae orci commodo feugiat non at tellus. Vivamus porta porttitor arcu quis mollis. Integer vitae elit rhoncus, tempor enim eget, maximus sem.",
+            "price": 550000,
+            "badrooms": 3,
+            "bathrooms": 2.0,
+            "garage": 1,
+            "sqft": 3200,
+            "lot_size": 3.2,
+            "is_published": true,
+            "list_date": "2021-02-12 18:00:19.957396+03",
+            "realtor_id": 1,
+            "cover": "photos/2021/02/15/home-5.jpg",
+            "state": "22"
+        }
+    },
+    {
+        "model": "listings.listing",
+        "pk": 3,
+        "fields": {
+            "title": "187 Woodrow Street",
+            "address": "187 Woodrow Street",
+            "city": "Salem",
+            "zipcode": "01915",
+            "description": "Nunc iaculis sodales libero ac suscipit. Maecenas a lacinia odio. Donec ultricies velit sapien, in dapibus orci porta vel. Vivamus nec ante diam. Aenean nunc neque, tristique ac metus eu, pulvinar rutrum quam. Cras placerat congue fermentum. Quisque arcu tellus, semper facilisis pharetra sed, ullamcorper at sem. Cras vitae risus efficitur, faucibus magna a, eleifend purus. Nunc nisi purus, aliquet vel congue ut, tempor efficitur enim. Etiam ut velit vitae orci commodo feugiat non at tellus. Vivamus porta porttitor arcu quis mollis. Integer vitae elit rhoncus, tempor enim eget, maximus sem.",
+            "price": 580000,
+            "badrooms": 4,
+            "bathrooms": 3.0,
+            "garage": 0,
+            "sqft": 3107,
+            "lot_size": 3.2,
+            "is_published": true,
+            "list_date": "2021-02-12 18:01:39.209451+03",
+            "realtor_id": 2,
+            "cover": "photos/2021/02/15/home-4.jpg",
+            "state": "22"
+        }
+    },
+    {
+        "model": "listings.listing",
+        "pk": 4,
+        "fields": {
+            "title": "28 Gifford Street",
+            "address": "28 Gifford Street",
+            "city": "Bedford",
+            "zipcode": "03103",
+            "description": "Nunc iaculis sodales libero ac suscipit. Maecenas a lacinia odio. Donec ultricies velit sapien, in dapibus orci porta vel. Vivamus nec ante diam. Aenean nunc neque, tristique ac metus eu, pulvinar rutrum quam. Cras placerat congue fermentum. Quisque arcu tellus, semper facilisis pharetra sed, ullamcorper at sem. Cras vitae risus efficitur, faucibus magna a, eleifend purus. Nunc nisi purus, aliquet vel congue ut, tempor efficitur enim. Etiam ut velit vitae orci commodo feugiat non at tellus. Vivamus porta porttitor arcu quis mollis. Integer vitae elit rhoncus, tempor enim eget, maximus sem.",
+            "price": 380000,
+            "badrooms": 1,
+            "bathrooms": 2.0,
+            "garage": 2,
+            "sqft": 2927,
+            "lot_size": 3.2,
+            "is_published": true,
+            "list_date": "2021-02-12 18:03:21.320572+03",
+            "realtor_id": 2,
+            "cover": "photos/2021/02/15/home-3.jpg",
+            "state": "30"
+        }
+    },
+    {
+        "model": "listings.listing",
+        "pk": 5,
+        "fields": {
+            "title": "12 United Road",
+            "address": "12 United Road",
+            "city": "South Hampton",
+            "zipcode": "03827",
+            "description": "Nunc iaculis sodales libero ac suscipit. Maecenas a lacinia odio. Donec ultricies velit sapien, in dapibus orci porta vel. Vivamus nec ante diam. Aenean nunc neque, tristique ac metus eu, pulvinar rutrum quam. Cras placerat congue fermentum. Quisque arcu tellus, semper facilisis pharetra sed, ullamcorper at sem. Cras vitae risus efficitur, faucibus magna a, eleifend purus. Nunc nisi purus, aliquet vel congue ut, tempor efficitur enim. Etiam ut velit vitae orci commodo feugiat non at tellus. Vivamus porta porttitor arcu quis mollis. Integer vitae elit rhoncus, tempor enim eget, maximus sem.",
+            "price": 230000,
+            "badrooms": 1,
+            "bathrooms": 1.5,
+            "garage": 1,
+            "sqft": 2201,
+            "lot_size": 3.1,
+            "is_published": true,
+            "list_date": "2021-02-12 18:04:30.346143+03",
+            "realtor_id": 2,
+            "cover": "photos/2021/02/15/home-2.jpg",
+            "state": "30"
+        }
+    },
+    {
+        "model": "listings.listing",
+        "pk": 6,
+        "fields": {
+            "title": "33 Essex Circle",
+            "address": "33 Essex Circle",
+            "city": "Lexington",
+            "zipcode": "01731",
+            "description": "Nunc iaculis sodales libero ac suscipit. Maecenas a lacinia odio. Donec ultricies velit sapien, in dapibus orci porta vel. Vivamus nec ante diam. Aenean nunc neque, tristique ac metus eu, pulvinar rutrum quam. Cras placerat congue fermentum. Quisque arcu tellus, semper facilisis pharetra sed, ullamcorper at sem. Cras vitae risus efficitur, faucibus magna a, eleifend purus. Nunc nisi purus, aliquet vel congue ut, tempor efficitur enim. Etiam ut velit vitae orci commodo feugiat non at tellus. Vivamus porta porttitor arcu quis mollis. Integer vitae elit rhoncus, tempor enim eget, maximus sem.",
+            "price": 780000,
+            "badrooms": 5,
+            "bathrooms": 3.5,
+            "garage": 1,
+            "sqft": 4145,
+            "lot_size": 4145,
+            "is_published": true,
+            "list_date": "2021-02-12 18:05:39.791817+03",
+            "realtor_id": 3,
+            "cover": "photos/2021/02/15/home-1.jpg",
+            "state": "1"
+        }
+    }
+]
