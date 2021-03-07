@@ -91,10 +91,6 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     }
-    # 'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-    # }
 }
 
 
@@ -162,3 +158,9 @@ EMAIL_USE_TLS = True
 
 # Authorization
 LOGIN_REDIRECT_URL = reverse_lazy('accounts:login')
+
+# Local settings
+try:
+    from .settings_development import *
+except:
+    pass
