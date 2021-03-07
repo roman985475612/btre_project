@@ -120,3 +120,6 @@ ENV/
 # Settings local
 /btre/settings_development.py
 /btre/settings_production.py
+
+# Test date
+fixtures/
